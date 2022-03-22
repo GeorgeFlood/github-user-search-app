@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Manrope&family=Oswald&family=Poppins:ital,wght@1,200&family=Source+Sans+Pro:wght@300&family=Space+Mono:ital@1&display=swap');
+
+*::before,
+*::after,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Lato', sans-serif;
+    background-color: #F5F8FE;
+}
+
+.head {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+    margin: 0 20%;
+}
+
+.lightNdark {
+    display: flex;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
+
+.head h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    border-bottom: .4rem solid black;
+}
+
+.searchSection {
+    margin: 0 25%;
+    margin-top: 10rem;
+    background-color: #FEFEFE;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+}
+
+.searchSection input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: 2rem;
+}
+
+.magnifyingGlass {
+    margin: auto;
+    margin-left: 1rem;
+}
+
+.search {
+    background-color: #007AFE;
+    outline: none;
+    border: none;
+    width: 9rem;
+    height: 4rem;
+    margin: auto;
+    margin-right: 1rem;
+    border-radius: 1rem;
+    color: white;
+    font-weight: 400;
+
+}

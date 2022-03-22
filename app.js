@@ -35,9 +35,9 @@ request.addEventListener('readystatechange', (e) => {
         profileName.textContent = `${data.login}`
         profileDate.textContent = `Joined ${data.created_at}`.substring(0, 17);;
         data.bio === null ? bio.textContent = 'No Bio available' : bio.textContent = `${data.bio}`;
-        repos.textContent = `Repos: ${data.public_repos}`
-        followers.textContent = `Followers: ${data.followers}`;
-        following.textContent = `Following: ${data.following}`
+        repos.textContent = `${data.public_repos}`
+        followers.textContent = `${data.followers}`;
+        following.textContent = `${data.following}`
         data.location === null ? location1.textContent = `Location: Anonymous` : location1.textContent = `Location: ${data.location}`;
         data.blog === '' ? website.textContent = 'No website available' : website.textContent = `Website: ${data.blog}`
         data.twitter_username === null ? twitter.textContent = 'No Twitter' : twitter.textContent = `Twitter: ${data.twitter_username}`;
