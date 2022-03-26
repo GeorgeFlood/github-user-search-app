@@ -13,6 +13,7 @@ const searchBar = document.querySelector('#search');
 const lightOrDark = document.querySelector('#lightOrDark');
 const sun = document.querySelector('.sun');
 const moon = document.querySelector('.moon');
+const button = document.querySelector('.search');
 
 
 
@@ -27,6 +28,7 @@ const userSearch = () => {
         request.open('GET', `https://api.github.com/users/${userName}`);
         request.send();
         console.log(request);
+        e.target.value = '';
     });
 };
 
@@ -58,8 +60,9 @@ request.addEventListener('readystatechange', (e) => {
         data.company === null ?
             (company.textContent = 'Not available') :
             (company.textContent = `Company: ${data.company}`);
-    }
-
+    } else if (e.target.readyState === 4) {
+        alert(`an error has occur'd in server or user doesn't exist`);
+    };
 });
 
 
@@ -74,14 +77,8 @@ sun.addEventListener('click', (e) => {
     main.className = 'darkMain';
     title.className = 'darkTitle';
     container.className = 'statsDark';
+    button.className = 'darkSearch';
     document.documentElement.className = 'bodyDark';
-    // document.querySelector('.title').style.color = 'white';
-    // document.querySelector('.searchSection').style.backgroundColor = '#1F2B48';
-    // document.querySelector('#search').style.backgroundColor = '#1F2B48';
-    // document.querySelector('#main').style.backgroundColor = '#1F2B48'
-    // document.querySelector('#main').style.boxShadow = 'none';
-    // document.querySelector('.searchSection').style.boxShadow = 'none';
-    // document.querySelector('#main').style.color = 'white';
     sun.style.display = 'none';
     moon.style.display = 'inline-block';
     lightOrDark.innerHTML = 'Dark';
@@ -102,13 +99,10 @@ moon.addEventListener('click', (e) => {
     main.className = 'main';
     title.className = 'title';
     container.className = 'stats';
+    button.className = 'search';
     document.documentElement.className = 'body';
     sun.style.display = 'inline-block';
     moon.style.display = 'none';
     lightOrDark.innerHTML = 'Light';
     lightOrDark.style.color = 'black';
 });
-
-
-
-// there must be a toggle option but this works for now!!
