@@ -15,6 +15,12 @@ html {
     background-color: #F5F8FE;
 }
 
+.body {
+    background-color: #F5F8FE;
+    transition: all .4s ease-in-out
+}
+
+
 .head {
     display: flex;
     justify-content: space-around;
@@ -31,7 +37,8 @@ html {
 .head h1 {
     font-size: 4rem;
     font-weight: 700;
-    border-bottom: .4rem solid black;
+    border-bottom: .4rem solid #007AFE;
+    transition: all .4s ease-in-out
 }
 
 .searchSection {
@@ -42,30 +49,222 @@ html {
     display: flex;
     justify-content: space-between;
     border-radius: 1rem;
+    box-shadow: 2px 2px 10px rgb(201, 192, 192);
+    transition: all .4s ease-in-out
 }
 
-.searchSection input {
-    width: 100%;
+.input {
+    min-width: 80%;
     border: none;
     outline: none;
-    padding-left: 2rem;
+    padding-left: 5rem;
+    transition: all .4s ease-in-out
 }
 
 .magnifyingGlass {
     margin: auto;
-    margin-left: 1rem;
+    margin-left: 0.7rem;
+    z-index: 100;
 }
 
 .search {
+    position: relative;
     background-color: #007AFE;
     outline: none;
     border: none;
-    width: 9rem;
+    min-width: 9rem;
     height: 4rem;
     margin: auto;
     margin-right: 1rem;
     border-radius: 1rem;
     color: white;
     font-weight: 400;
+    box-shadow: 3px 3px 5px grey;
+}
 
+.search:active {
+    transition: all .1s ease-in-out;
+    top: 0.2rem;
+    box-shadow: 1px 1px 4px grey;
+}
+
+main {
+    margin: 0 25%;
+    margin-top: 3rem;
+    background-color: #FEFEFE;
+    box-shadow: -1px -1px 10px grey,
+        1px 1px 10px grey;
+    border-radius: 1rem;
+    transition: all .4s ease-in-out
+}
+
+#profileName {
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+
+main img {
+    display: inline;
+    border-radius: 50%;
+    margin: 1rem 0rem 0rem 1rem;
+}
+
+.info {
+    position: relative;
+    display: flex;
+    min-width: 65%;
+    margin: 0 5% 0 25%;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 10rem;
+    font-size: 1.5rem;
+}
+
+#bio {
+    position: relative;
+    margin: 0 20%;
+    bottom: 4rem;
+    left: 3.3rem;
+    font-size: 1.5rem;
+}
+
+.searchSectionDark {
+    background-color: #1F2B48;
+    color: white;
+}
+
+::placeholder {
+    color: rgb(129, 139, 145);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    height: 6.5rem;
+    border-radius: 1rem;
+    background-color: #F5F8FE;
+    font-size: 1.6rem;
+    max-width: 70%;
+    transition: all .4s ease-in-out
+}
+
+.container {
+    flex-direction: column;
+    margin: auto;
+}
+
+.container h4 {
+    color: rgb(104, 104, 104);
+    font-weight: 700;
+}
+
+.container p {
+    padding-top: .4rem;
+}
+
+.miscellaneous {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.4rem;
+    min-width: 50%;
+    justify-content: space-around;
+    padding: 2rem 0 2rem 0;
+}
+
+.miscellaneous p {
+    margin-bottom: 2rem;
+    opacity: .5;
+}
+
+.moon {
+    display: none;
+}
+
+/* dark classes  */
+
+.bodyDark {
+    background-color: #141C2F;
+    transition: ease-in-out .5s;
+}
+
+.darkTitle {
+    color: white;
+    transition: ease-in-out .2s;
+}
+
+.searchDark {
+    margin: 0 25%;
+    margin-top: 10rem;
+    background-color: #1F2B48;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+    box-shadow: none;
+    transition: ease-in-out .5s;
+}
+
+.darkInput {
+    background-color: #1F2B48;
+    color: rgba(255, 255, 255, 0.959);
+    min-width: 80%;
+    border: none;
+    outline: none;
+    padding-left: 5rem;
+    transition: ease-in-out .5s;
+}
+
+.darkMain {
+    background-color: #1F2B48;
+    color: white;
+    box-shadow: none;
+    transition: ease-in-out .5s;
+}
+
+.statsDark {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    height: 6.5rem;
+    border-radius: 1rem;
+    background-color: #141C2F;
+    font-size: 1.6rem;
+    max-width: 70%;
+    transition: all .5s ease-in-out;
+}
+
+.statsDark h4 {
+    color: rgba(255, 255, 255, 0.637);
+    transition: all .4s ease-in-out;
+}
+
+#lightOrDark {
+    padding-right: 1rem;
+    transition: .4s ease-in-out;
+    font-size: 1.8rem;
+}
+
+.moon,
+.sun {
+    cursor: pointer;
+    animation-name: moon;
+    animation-duration: .7s;
+}
+
+
+
+@keyframes moon {
+    from {
+        opacity: 0;
+        transform: scale(2);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
